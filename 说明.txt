@@ -1,0 +1,15 @@
+1.添加和移除右键菜单需要管理员权限,尽量不要重命名本文件夹(可能会有bug)
+
+2.添加右键菜单后,仅在mp3/wav文件上显示To wav/To mp3选项,其他格式文件不显示,且不支持批量转换
+
+3.对于采样率过低的wav,转换成mp3时有码率上限(如22050Hz的mp3,码率最高只能是160kbps)
+
+4.对于采样率过高的wav,转换成mp3时自动设为48000Hz(mp3采样上限为48000Hz)
+
+5."添加.bat"带有注释的值可以修改,要应用更改先移除再添加
+::here change menu name
+set menuName_ToMp3=To mp3
+set menuName_ToWav=To wav
+
+::choose your commonly used wavBitDepth,16/24/32
+set wavBitDepth=16
